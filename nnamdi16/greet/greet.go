@@ -26,4 +26,5 @@ func (o *Octopus) Reset() {
 //Hello prints Hello World
 func Hello()  {
 	fmt.Println("Hello, World!")
+
 }
