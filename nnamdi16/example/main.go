@@ -8,7 +8,17 @@ import (
 	// "strconv"
 )
 
+func greetings(name string) string {
+	return "Hello " + name
+}
+
+func add(x,  y int) int {
+	return x + y
+}
+
 func main()  {
+	fmt.Println(add(54,45))
+	fmt.Println(greetings("Einstein"))
 	greet.Hello();
 	fmt.Println(greet.Shark)
 
