@@ -5,7 +5,25 @@ package main
 
 import "fmt"
 
+func leftRotation(a []int, size int, rotation int) []int {
+	var newArray []int
+
+	for i := 0; i < rotation; i++ {
+		newArray = a[1:size]
+		fmt.Println(newArray)
+		newArray = append(newArray,a[0])
+		fmt.Println(newArray)
+		a = newArray
+	}
+	return a
+}
+
 func main()  {
+	a := [] int {1,2,3,4,5}
+	// fmt.Println(len(a))
+	fmt.Printf("input : %+v\n", a)
+	rotation := 4
+	fmt.Printf("output: %+v\n", leftRotation(a, len(a),rotation))
 	var fruits [2]string
 	fruits[0] = "pomegranate"
 	fruits[1] = "rambutan"
@@ -63,4 +81,5 @@ fmt.Printf("array: cap %v, len %v, %v\n", cap(array), len(array), array)
 //It allocates an underlying array with size equal to the given capacity, and returns a slice that refers to that array:
 freeSlice := make([]int,4,10)
 fmt.Printf("len = %v, cap = %v, slice = %v\n", len(freeSlice),cap(freeSlice),freeSlice)
+
 }
