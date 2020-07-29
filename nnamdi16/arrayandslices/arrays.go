@@ -45,6 +45,22 @@ func main()  {
 
 	//1st byte
 	fmt.Println(string(sByte[0]))
+//Differences between array and slices
+//Array is fixed while slices is dynamic
+//The number of elments in a slice can grow dynamically
+//Slice uses array behind the curtain but slice by itself cannot store any data
+//Slice plays with a portion of the underlying array
+// The length of a slice is the length of the segment of the array that the slice contains.
+// The capacity is the maximum size up to which the segment can grow
 
+var array = [6]int{10,20,30,40,50,60}
+var arrayslice = array[1:4]
+fmt.Printf("slice: cap %v, len %v, %v\n",cap(arrayslice),len(arrayslice), arrayslice)
+fmt.Printf("array: cap %v, len %v, %v\n", cap(array), len(array), array)
 
+//make function is used to create slices
+//The make() function takes a type, a length, and an optional capacity.
+//It allocates an underlying array with size equal to the given capacity, and returns a slice that refers to that array:
+freeSlice := make([]int,4,10)
+fmt.Printf("len = %v, cap = %v, slice = %v\n", len(freeSlice),cap(freeSlice),freeSlice)
 }
