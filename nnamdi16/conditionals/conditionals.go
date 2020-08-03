@@ -25,4 +25,10 @@ func main()  {
 	}
 
 	switchCase()
+	name := "tim"
+	fmt.Println("Before if")
+	if name != "tim" || name == "tim" {
+		fmt.Println("Inside if")
+	}
+	fmt.Println("After it")
 }
