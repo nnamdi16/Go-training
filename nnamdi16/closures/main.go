@@ -1,6 +1,10 @@
 package main
+//go mode init closures
+import (
+	"fmt"
+	"closures/fibonacci"
+)
 
-import "fmt"
 
 // return a function which is returning int
 // A closure is a function value (nextInt()) that references variables(i) from outside its body(intSeq()). But still remembers the value.
@@ -15,6 +19,16 @@ func intSeq() func() int {
 
 
 func main()  {
+	n := 10
+	for i := 0; i <= n; i++ {
+		fmt.Printf("%d", fibonacci.Fibor(i))
+	}
+	fmt.Println()
+
+	nextFibo := fibonacci.Fiboi()
+	for i := 0; i <= n; i++ {
+		fmt.Printf("%d", nextFibo())
+	}
 	nextInt := intSeq()
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())
