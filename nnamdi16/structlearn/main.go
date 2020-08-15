@@ -3,6 +3,7 @@ package main
 import (
 	"structlearn/structsample"
 	"structlearn/methods"
+	"structlearn/animal"
 	"fmt"
 )
 // type Person struct {
@@ -40,4 +41,12 @@ func main()  {
 
 	fmt.Println(p3.Hello())
 	fmt.Println(p3)
+
+	a := animal.Animal{
+		Name: "Gopher",
+		Age: 3,
+	}
+
+	myStr := a.String()
+	fmt.Println(myStr)
 }
