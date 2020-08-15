@@ -5,6 +5,7 @@ import (
 	"structlearn/methods"
 	"structlearn/animal"
 	"structlearn/ipaddress"
+	"structlearn/cities"
 	"fmt"
 )
 // type Person struct {
@@ -60,4 +61,6 @@ func main()  {
 	for name,ip := range host {
 		fmt.Printf("%v: %v\n", name, ip)
 	}
+
+	cities.CreateCities()
 }
