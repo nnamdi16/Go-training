@@ -4,6 +4,7 @@ import (
 	"structlearn/structsample"
 	"structlearn/methods"
 	"structlearn/animal"
+	"structlearn/ipaddress"
 	"fmt"
 )
 // type Person struct {
@@ -49,4 +50,14 @@ func main()  {
 
 	myStr := a.String()
 	fmt.Println(myStr)
+
+
+	host := map[string]ipaddress.IPAddr{
+		"loopback" : {127, 0, 0, 1},
+		"googleDNS" : {1,2,3,4},
+	}
+
+	for name,ip := range host {
+		fmt.Printf("%v: %v\n", name, ip)
+	}
 }
