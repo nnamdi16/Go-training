@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"github.com/nnamdi16/Go-training/nnamdi16/annonymousFunction/closures"
+	"fmt"
+	
+)
 
 //Regular Function
 func sayHello(msg string)  {
@@ -28,4 +32,11 @@ func main()  {
 	printFnc := regularFunctionReturningAnonymousFunction()
 
 	printFnc("Hello from returned anonymous function")
+
+	//Implementing Closures with annonymous function.
+	nextInt := closures.IntSeq()
+	fmt.Println(nextInt())
+	fmt.Println(nextInt())
+	fmt.Println(nextInt())
+	
 }
